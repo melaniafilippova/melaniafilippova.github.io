@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="Свадебное приглашение — Мелания & Вадим, 17 июня 2027">
+  <title>Мелания & Вадим — 17 июня 2027</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400;1,6..96,500;1,6..96,600;1,6..96,700;1,6..96,800;1,6..96,900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Great+Vibes&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ENVELOPE OVERLAY -->
+  <div id="envelope-overlay" class="envelope-overlay" role="button" tabindex="0" aria-label="Нажмите на печать, чтобы открыть приглашение">
+    <div class="envelope-bg">
+      <div class="envelope-bg-texture"></div>
+    </div>
+    <div class="envelope-wrapper">
+      <div class="envelope-body">
+        <div class="envelope-interior"></div>
+        <div class="envelope-bottom-flap"></div>
+        <div class="envelope-left-flap"></div>
+        <div class="envelope-right-flap"></div>
+        <div class="invitation-card-preview">
+          <div class="card-monogram-inner">M & V</div>
+        </div>
+        <div class="envelope-top-flap">
+          <div class="flap-inner"></div>
+        </div>
+        <div class="wax-seal" id="wax-seal">
+          <div class="seal-ring">
+            <span class="seal-monogram">M&amp;V</span>
+          </div>
+          <div class="seal-cracks"></div>
+        </div>
+      </div>
+      <div class="envelope-shadow"></div>
+    </div>
+    <div class="envelope-hint">Нажмите на печать</div>
+    <div class="seal-particles" id="seal-particles"></div>
+  </div>
+
+  <!-- MAIN WEBSITE -->
+  <main id="main-site" class="main-site hidden">
+    <button id="music-toggle" class="music-toggle" aria-label="Включить музыку" title="Включить музыку">
+      <svg class="music-icon music-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+      </svg>
+      <svg class="music-icon music-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+        <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/><line x1="2" y1="2" x2="22" y2="22"/>
+      </svg>
+    </button>
+
+    <div class="progress-bar" id="progress-bar">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+
+    <!-- SCREEN 1: COVER -->
+    <section class="screen cover-screen active" id="screen-cover">
+      <div class="screen-inner cover-inner">
+        <div class="ornament-frame-top"></div>
+        <div class="cover-content">
+          <p class="cover-lead">Приглашение на свадьбу</p>
+          <h1 class="cover-names">
+            <span class="name-first">Мелания</span>
+            <span class="ampersand">&amp;</span>
+            <span class="name-second">Вадим</span>
+          </h1>
+          <div class="cover-divider">
+            <svg viewBox="0 0 200 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="0" y1="10" x2="80" y2="10" stroke="currentColor" stroke-width="0.5"/>
+              <circle cx="100" cy="10" r="3" fill="currentColor"/>
+              <line x1="120" y1="10" x2="200" y2="10" stroke="currentColor" stroke-width="0.5"/>
+            </svg>
+          </div>
+          <p class="cover-date">17 июня 2027 года</p>
+          <div class="cover-ornament-bottom">
+            <svg viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 5 C20 5, 5 15, 5 25 C5 35, 15 38, 30 38 C45 38, 55 35, 55 25 C55 15, 40 5, 30 5Z" stroke="currentColor" stroke-width="0.5" fill="none"/>
+              <path d="M30 12 C24 12, 14 18, 14 24 C14 30, 22 33, 30 33 C38 33, 46 30, 46 24 C46 18, 36 12, 30 12Z" stroke="currentColor" stroke-width="0.3" fill="none"/>
+              <circle cx="30" cy="24" r="2" fill="currentColor" opacity="0.6"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </div>
+    </section>
+
+    <!-- SCREEN 2: FLORAL -->
+    <section class="screen floral-screen" id="screen-floral">
+      <div class="screen-inner floral-inner">
+        <div class="floral-bg-layer">
+          <div class="floral-cluster floral-top-right">
+            <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" class="floral-svg">
+              <path d="M350 50 Q300 100 280 180 Q260 260 300 350 Q320 400 280 450" stroke="#193B29" stroke-width="2" fill="none" opacity="0.3"/>
+              <ellipse cx="320" cy="120" rx="45" ry="55" fill="#F28AA5" opacity="0.7" transform="rotate(-15 320 120)"/>
+              <ellipse cx="310" cy="110" rx="35" ry="45" fill="#F58B78" opacity="0.6" transform="rotate(-10 310 110)"/>
+              <ellipse cx="315" cy="115" rx="25" ry="35" fill="#F6B49A" opacity="0.8"/>
+              <ellipse cx="250" cy="200" rx="40" ry="50" fill="#F6B49A" opacity="0.7" transform="rotate(10 250 200)"/>
+              <ellipse cx="290" cy="280" rx="35" ry="45" fill="#F58B78" opacity="0.6" transform="rotate(-5 290 280)"/>
+              <circle cx="340" cy="220" r="15" fill="#F1D86A" opacity="0.5"/>
+              <circle cx="260" cy="300" r="12" fill="#B9CB54" opacity="0.5"/>
+              <circle cx="350" cy="160" r="8" fill="#F28AA5" opacity="0.4"/>
+              <circle cx="310" cy="340" r="9" fill="#F6B49A" opacity="0.5"/>
+              <path d="M360 100 Q380 80 390 90 Q380 110 360 100Z" fill="#193B29" opacity="0.3"/>
+              <path d="M300 320 Q320 310 330 325 Q320 340 300 320Z" fill="#193B29" opacity="0.3"/>
+            </svg>
+          </div>
+          <div class="floral-cluster floral-bottom-left">
+            <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" class="floral-svg">
+              <path d="M50 450 Q100 400 120 320 Q140 240 100 150 Q80 100 120 50" stroke="#193B29" stroke-width="2" fill="none" opacity="0.3"/>
+              <ellipse cx="80" cy="380" rx="45" ry="55" fill="#F28AA5" opacity="0.7" transform="rotate(15 80 380)"/>
+              <ellipse cx="75" cy="300" rx="40" ry="50" fill="#F6B49A" opacity="0.7" transform="rotate(-10 75 300)"/>
+              <ellipse cx="85" cy="220" rx="35" ry="45" fill="#F58B78" opacity="0.6"/>
+              <circle cx="50" cy="270" r="15" fill="#F1D86A" opacity="0.5"/>
+              <circle cx="100" cy="350" r="12" fill="#B9CB54" opacity="0.5"/>
+              <circle cx="60" cy="180" r="8" fill="#F28AA5" opacity="0.4"/>
+              <path d="M100 320 Q120 310 130 325 Q120 340 100 320Z" fill="#193B29" opacity="0.25"/>
+            </svg>
+          </div>
+        </div>
+        <div class="floral-content">
+          <p class="floral-subtitle">Красота этого дня — в цветах, любви и вас</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 3: DATE -->
+    <section class="screen date-screen" id="screen-date">
+      <div class="screen-inner date-inner">
+        <div class="date-frame">
+          <div class="date-number animate-reveal" data-part="day">17</div>
+          <div class="date-separator">/</div>
+          <div class="date-number animate-reveal" data-part="month">06</div>
+          <div class="date-separator">/</div>
+          <div class="date-number animate-reveal" data-part="year">2027</div>
+        </div>
+        <p class="date-month-year">Июня</p>
+        <div class="countdown" id="countdown">
+          <div class="countdown-item">
+            <span class="countdown-value" id="cd-days">—</span>
+            <span class="countdown-label">дней</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-value" id="cd-hours">—</span>
+            <span class="countdown-label">часов</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-value" id="cd-minutes">—</span>
+            <span class="countdown-label">минут</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-value" id="cd-seconds">—</span>
+            <span class="countdown-label">секунд</span>
+          </div>
+        </div>
+        <p class="date-subtitle">До нашего события</p>
+      </div>
+    </section>
+
+    <!-- SCREEN 4: OUR STORY -->
+    <section class="screen story-screen" id="screen-story">
+      <div class="screen-inner story-inner">
+        <p class="section-lead">Наша история</p>
+        <h2 class="section-title">Как всё начиналось</h2>
+        <div class="story-grid">
+          <div class="story-photo-placeholder">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="placeholder-icon">
+              <rect x="20" y="20" width="160" height="160" rx="8" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="4 4"/>
+              <circle cx="100" cy="80" r="25" stroke="currentColor" stroke-width="1" fill="none"/>
+            </svg>
+            <span class="placeholder-text">Фото пары</span>
+          </div>
+          <div class="story-text">
+            <p class="story-year">20XX</p>
+            <p class="story-body">Здесь будет рассказ о том, как вы познакомились. Первая встреча, первое впечатление.</p>
+          </div>
+        </div>
+        <div class="story-grid story-grid-reverse">
+          <div class="story-photo-placeholder">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="placeholder-icon">
+              <rect x="20" y="20" width="160" height="160" rx="8" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="4 4"/>
+            </svg>
+            <span class="placeholder-text">Ваше фото</span>
+          </div>
+          <div class="story-text">
+            <p class="story-year">20XX</p>
+            <p class="story-body">Продолжение истории — путешествия, важные моменты, предложение.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 5: LOCATION -->
+    <section class="screen location-screen" id="screen-location">
+      <div class="screen-inner location-inner">
+        <p class="section-lead">Место проведения</p>
+        <h2 class="section-title">Церемония</h2>
+        <div class="location-illustration">
+          <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" class="building-svg">
+            <rect x="60" y="60" width="180" height="140" stroke="#193B29" stroke-width="1" fill="none"/>
+            <line x1="80" y1="60" x2="80" y2="200" stroke="#193B29" stroke-width="1" opacity="0.5"/>
+            <line x1="110" y1="60" x2="110" y2="200" stroke="#193B29" stroke-width="1" opacity="0.5"/>
+            <line x1="140" y1="60" x2="140" y2="200" stroke="#193B29" stroke-width="1" opacity="0.5"/>
+            <line x1="170" y1="60" x2="170" y2="200" stroke="#193B29" stroke-width="1" opacity="0.5"/>
+            <line x1="200" y1="60" x2="200" y2="200" stroke="#193B29" stroke-width="1" opacity="0.5"/>
+            <line x1="220" y1="60" x2="220" y2="200" stroke="#193B29" stroke-width="1" opacity="0.5"/>
+            <polygon points="50,60 150,20 250,60" stroke="#193B29" stroke-width="1" fill="none"/>
+            <path d="M135 200 L135 160 Q150 140 165 160 L165 200" stroke="#193B29" stroke-width="1" fill="none"/>
+            <circle cx="150" cy="15" r="4" stroke="#B92737" stroke-width="1" fill="none"/>
+          </svg>
+        </div>
+        <div class="location-details">
+          <p class="location-time">12:00 — Регистрация брака</p>
+          <p class="location-venue">Зал Торжеств, отдел ЗАГС Адмиралтейского района</p>
+          <address class="location-address">Санкт-Петербург, 1-я Красноармейская улица, дом 6</address>
+          <a class="location-map-btn" href="https://yandex.ru/maps/?text=Санкт-Петербург+1-я+Красноармейская+улица+дом+6" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            Открыть карту
+          </a>
+        </div>
+        <div class="location-reception-teaser">
+          <p class="teaser-text">Место празднования будет указано дополнительно</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 6: PROGRAM -->
+    <section class="screen program-screen" id="screen-program">
+      <div class="screen-inner program-inner">
+        <p class="section-lead">Программа дня</p>
+        <h2 class="section-title">Расписание</h2>
+        <div class="timeline-oval">
+          <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg" class="timeline-svg">
+            <ellipse cx="150" cy="200" rx="120" ry="170" stroke="#193B29" stroke-width="0.5" fill="none"/>
+            <ellipse cx="150" cy="200" rx="112" ry="162" stroke="#193B29" stroke-width="0.3" fill="none" opacity="0.5"/>
+            <path d="M30 80 Q50 60 70 80 Q50 100 30 80Z" stroke="#F28AA5" stroke-width="0.5" fill="none" opacity="0.4"/>
+            <path d="M270 80 Q250 60 230 80 Q250 100 270 80Z" stroke="#F28AA5" stroke-width="0.5" fill="none" opacity="0.4"/>
+            <path d="M30 320 Q50 340 70 320 Q50 300 30 320Z" stroke="#F58B78" stroke-width="0.5" fill="none" opacity="0.4"/>
+            <path d="M270 320 Q250 340 230 320 Q250 300 270 320Z" stroke="#F58B78" stroke-width="0.5" fill="none" opacity="0.4"/>
+          </svg>
+          <div class="timeline-content">
+            <div class="timeline-item">
+              <div class="timeline-time">12:00</div>
+              <div class="timeline-event">
+                <h3>Регистрация брака</h3>
+                <p>Начало церемонии</p>
+              </div>
+            </div>
+            <div class="timeline-item timeline-guest">
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item timeline-placeholder">
+              <div class="timeline-time">—:——</div>
+              <div class="timeline-event">
+                <h3>Празднование</h3>
+                <p>Подробности будут сообщены</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 7: DRESS CODE -->
+    <section class="screen dresscode-screen" id="screen-dresscode">
+      <div class="screen-inner dresscode-inner">
+        <p class="section-lead">Дресс-код</p>
+        <h2 class="section-title">Палитра вечера</h2>
+        <p class="dresscode-text">Мы будем рады, если ваш наряд будет гармонировать с цветовой палитрой нашего праздника.</p>
+        <div class="palette-grid">
+          <div class="palette-swatch" style="--swatch-color: #F28AA5;"><span class="swatch-label">Розовый</span></div>
+          <div class="palette-swatch" style="--swatch-color: #F58B78;"><span class="swatch-label">Коралловый</span></div>
+          <div class="palette-swatch" style="--swatch-color: #F6B49A;"><span class="swatch-label">Персиковый</span></div>
+          <div class="palette-swatch" style="--swatch-color: #F1D86A;"><span class="swatch-label">Жёлтый</span></div>
+          <div class="palette-swatch" style="--swatch-color: #B9CB54;"><span class="swatch-label">Лаймовый</span></div>
+          <div class="palette-swatch" style="--swatch-color: #193B29;"><span class="swatch-label">Зелёный</span></div>
+          <div class="palette-swatch palette-dark" style="--swatch-color: #4B3028;"><span class="swatch-label swatch-label-light">Шоколадный</span></div>
+        </div>
+        <div class="dresscode-note">
+          <p>Будем признательны, если вы избегаете белого и чёрного цветов в нарядах.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 8: RSVP -->
+    <section class="screen rsvp-screen" id="screen-rsvp">
+      <div class="screen-inner rsvp-inner">
+        <p class="section-lead">Подтверждение</p>
+        <h2 class="section-title">WILL YOU JOIN US?</h2>
+        <p class="rsvp-intro">Будем очень рады разделить этот день с вами. Пожалуйста, ответьте на несколько вопросов.</p>
+        <div class="rsvp-form-container">
+          <form id="rsvp-form" class="rsvp-form" novalidate>
+            <div class="form-group">
+              <label for="guest-name" class="form-label">Ваше имя и фамилия</label>
+              <input type="text" id="guest-name" name="name" required placeholder="Имя Фамилия" autocomplete="name">
+            </div>
+            <fieldset class="rsvp-choice-fieldset">
+              <legend class="form-label">Сможете ли вы прийти?</legend>
+              <div class="rsvp-choices">
+                <label class="rsvp-radio" data-value="yes">
+                  <input type="radio" name="attendance" value="yes" required>
+                  <span class="radio-custom"></span>
+                  <span class="radio-text">Да, с радостью!</span>
+                </label>
+                <label class="rsvp-radio" data-value="no">
+                  <input type="radio" name="attendance" value="no">
+                  <span class="radio-custom"></span>
+                  <span class="radio-text">К сожалению, не смогу</span>
+                </label>
+              </div>
+            </fieldset>
+            <div class="rsvp-conditional" id="rsvp-conditional">
+              <div class="form-group">
+                <label for="guest-count" class="form-label">Количество гостей</label>
+                <select id="guest-count" name="guest_count">
+                  <option value="">Выберите…</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </div>
+              <fieldset class="rsvp-choice-fieldset">
+                <legend class="form-label">Предпочтения по меню</legend>
+                <div class="rsvp-choices rsvp-choices-grid">
+                  <label class="rsvp-radio rsvp-card"><input type="radio" name="menu" value="meat"><span class="radio-custom"></span><span class="radio-text">Мясное</span></label>
+                  <label class="rsvp-radio rsvp-card"><input type="radio" name="menu" value="fish"><span class="radio-custom"></span><span class="radio-text">Рыбное</span></label>
+                  <label class="rsvp-radio rsvp-card"><input type="radio" name="menu" value="veg"><span class="radio-custom"></span><span class="radio-text">Вегетарианское</span></label>
+                </div>
+              </fieldset>
+              <div class="form-group">
+                <label for="food-allergies" class="form-label">Пищевые ограничения</label>
+                <textarea id="food-allergies" name="food_allergies" rows="2" placeholder="Орехи, глютен…"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="guest-comment" class="form-label">Комментарий</label>
+                <textarea id="guest-comment" name="comment" rows="3" placeholder="Что-то, что нам стоит знать…"></textarea>
+              </div>
+            </div>
+            <div class="rsvp-no-message" id="rsvp-no-message" style="display:none">
+              <p class="no-message-text">Нам очень жаль. Мы будем скучать!</p>
+            </div>
+            <button type="submit" class="rsvp-submit-btn" id="rsvp-submit-btn" style="display:none">Отправить ответ</button>
+          </form>
+          <div class="rsvp-success" id="rsvp-success" style="display:none">
+            <div class="success-icon">
+              <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="30" r="28" stroke="#193B29" stroke-width="1" fill="none"/>
+                <path d="M18 30 L26 38 L42 22" stroke="#193B29" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="success-title">Спасибо!</h3>
+            <p class="success-text">Ваш ответ отправлен. Ждём встречи с вами!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 9: FINALE -->
+    <section class="screen finale-screen" id="screen-finale">
+      <div class="screen-inner finale-inner">
+        <div class="finale-ornament">
+          <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" class="finale-floral">
+            <path d="M150 20 C130 20 100 40 100 70 C100 100 120 120 150 130 C180 120 200 100 200 70 C200 40 170 20 150 20Z" stroke="#193B29" stroke-width="0.5" fill="none"/>
+            <ellipse cx="80" cy="80" rx="25" ry="30" fill="#F28AA5" opacity="0.3" transform="rotate(-20 80 80)"/>
+            <ellipse cx="220" cy="80" rx="25" ry="30" fill="#F28AA5" opacity="0.3" transform="rotate(20 220 80)"/>
+            <circle cx="60" cy="60" r="6" fill="#F1D86A" opacity="0.3"/>
+            <circle cx="240" cy="60" r="6" fill="#F1D86A" opacity="0.3"/>
+          </svg>
+        </div>
+        <div class="finale-content">
+          <p class="finale-lead">Спасибо, что вы с нами</p>
+          <h2 class="finale-names">Мелания & Вадим</h2>
+          <div class="finale-divider">
+            <svg viewBox="0 0 100 10" fill="none"><line x1="0" y1="5" x2="40" y2="5" stroke="currentColor" stroke-width="0.5"/><circle cx="50" cy="5" r="2" fill="currentColor"/><line x1="60" y1="5" x2="100" y2="5" stroke="currentColor" stroke-width="0.5"/></svg>
+          </div>
+          <p class="finale-date">17 · 06 · 2027</p>
+          <p class="finale-thanks">Мы будем счастливы разделить этот особенный день с самыми близкими людьми.</p>
+          <p class="finale-hashtag">#МеланияИВадим2027</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation dots -->
+    <nav class="nav-dots" id="nav-dots" aria-label="Навигация">
+      <button class="nav-dot active" data-screen="0" aria-label="Обложка"></button>
+      <button class="nav-dot" data-screen="1" aria-label="Цветы"></button>
+      <button class="nav-dot" data-screen="2" aria-label="Дата"></button>
+      <button class="nav-dot" data-screen="3" aria-label="История"></button>
+      <button class="nav-dot" data-screen="4" aria-label="Место"></button>
+      <button class="nav-dot" data-screen="5" aria-label="Программа"></button>
+      <button class="nav-dot" data-screen="6" aria-label="Дресс-код"></button>
+      <button class="nav-dot" data-screen="7" aria-label="RSVP"></button>
+      <button class="nav-dot" data-screen="8" aria-label="Финал"></button>
+    </nav>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
